@@ -3,18 +3,19 @@ environment:
 
 branches:
   only:
-    - master  # ветка git
     - main
 
-cache: node_modules  # кеширование
+cache: node_modules
 
 install:
-  - npm install  # команда установки зависимостей
-
-build: off  # отключаем встроенную в appveyor систему сборки
+  - npm install 
 
 build_script:
-  - npm run build   # команда сборки
+  - mode: Script
+    script:
+      - npm install
+      - npm run build
+
 
 test_script:
-  - npm run lint && npm test  # скрипт тестирования
+  - npm run lint && npm test
