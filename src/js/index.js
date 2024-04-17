@@ -7,4 +7,13 @@ export function getHealthStatus(character) {
       return 'critical';
     }
 }
+
+export function sortHeroesByHealth(heroes) {
+  const sortedHeroes = heroes.slice();
+  
+  sortedHeroes.sort((a, b) => b.health - a.health);
+  
+  return sortedHeroes;
+}
+
   
