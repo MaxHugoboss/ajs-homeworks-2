@@ -1,4 +1,4 @@
-const { sortHeroesByHealth } = require('../index');
+import { sortHeroesByHealth } from '../index';
 
 test('Sorting heroes by health', () => {
     const heroes = [
